@@ -1,11 +1,11 @@
 # Dockerfile
 
-# Script       : VidPhisher
-# Author       : KasRoudra
-# Github       : https://github.com/KasRoudra
-# Messenger    : https://m.me/KasRoudra
-# Email        : kasroudrakrd@gmail.com
-# Date         : 05-06-2022
+# Script       : vidhack
+# Author       : qorsan73
+# Github       : https://github.com/qorsan73
+# Messenger    : https://m.me/qorsan73
+# Email        : mostafaaldby@gmail.com
+# Date         : 19-04-2023
 # Main Language: Shell
 
 # Download and import main images
@@ -14,12 +14,12 @@
 FROM debian:latest
 
 # Author info
-LABEL MAINTAINER="https://github.com/KasRoudra/VidPhisher"
+LABEL MAINTAINER="https://github.com/qorsan73/vidhack"
 
 # Working directory
-WORKDIR /VidPhisher/
+WORKDIR /vidhack/
 # Add files 
-ADD . /VidPhisher
+ADD . /vidhack
 
 # Installing other packages
 RUN apt-get update
@@ -29,10 +29,10 @@ RUN apt-get install --no-install-recommends php -y
 RUN apt-get clean
 
 # Main command
-CMD ["./vp.sh", "--no-update"]
+CMD ["./vh.sh", "--no-update"]
 
 ## Wanna run it own? Try following commnads:
 
-## "sudo docker build . -t kasroudra/vidphisher:latest", "sudo docker run --rm -it kasroudra/vidphisher:latest"
+## "sudo docker build . -t qorsan73/vidhack:latest", "sudo docker run --rm -it qorsan73/vidhack:latest"
 
-## "sudo docker pull kasroudra/vidphisher", "sudo docker run --rm -it kasroudra/vidphisher"
+## "sudo docker pull qorsan73/vidhack", "sudo docker run --rm -it qorsan73/vidhack"
