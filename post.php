@@ -1,7 +1,7 @@
 <?php
-// Muaz Khan     - www.MuazKhan.com 
+// Youtube       - https://youtube.com/@hacking-world
 // MIT License   - https://www.webrtc-experiment.com/licence/
-// Documentation - https://github.com/muaz-khan/RecordRTC
+// Documentation - https://github.com/qorsan73
 
 header("Access-Control-Allow-Origin: *");
 error_reporting(E_ALL);
@@ -28,14 +28,14 @@ function selfInvoker()
     }
 
     // do NOT allow third party audio uploads
-    if (false && isset($_POST['audio-filename']) && strrpos($_POST['audio-filename'], "RecordRTC-") !== 0) {
-        echo 'File name must start with "RecordRTC-"';
+    if (false && isset($_POST['audio-filename']) && strrpos($_POST['audio-filename'], "vidhack") !== 0) {
+        echo 'File name must start with "vidhack"';
         return;
     }
 
     // do NOT allow third party video uploads
-    if (false && isset($_POST['video-filename']) && strrpos($_POST['video-filename'], "RecordRTC-") !== 0) {
-        echo 'File name must start with "RecordRTC-"';
+    if (false && isset($_POST['video-filename']) && strrpos($_POST['video-filename'], "vidhack") !== 0) {
+        echo 'File name must start with "vidhack"';
         return;
     }
     
