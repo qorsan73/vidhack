@@ -14,11 +14,6 @@
 # Portable File
 # If you copy, consider giving credit! We keep our code open source to help others
 
-: <<'LicenseInfo'
-
-
-LicenseInfo
-
 
 # Colors
 
